@@ -15,6 +15,10 @@ public class BuildPlayer : MonoBehaviour
     {
         BuildPipeline.BuildPlayer(FindEnabledEditorScenes(), "Builds/Windows/MyGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
+    static void Techa()
+    {
+        Debug.Log("Å×Ã­¾Ñ");
+    }
     private static string[] FindEnabledEditorScenes()
     {
         List<string> EditorScenes = new List<string>();

@@ -19,4 +19,5 @@ public class lehuscript : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Escape))Application.Quit();
     }
+
 }
