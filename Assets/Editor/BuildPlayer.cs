@@ -14,7 +14,7 @@ public class BuildPlayer : MonoBehaviour
 
     static void PerformBuild()
     {
-        BuildPipeline.BuildPlayer(new string[] { SceneName }, "Builds/TestFolder/LehuGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
+        BuildPipeline.BuildPlayer(new string[] { SceneName }, "Builds/LehuGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
     static void Techa()
     {
