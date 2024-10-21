@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 
 public class lehuscript : MonoBehaviour
 {
+    [ContextMenu("·¹ÈÄ")]
+    public void ASDF()
+    {
+        Debug.Log(EditorBuildSettings.scenes[0].path);
+    }
+
+
     [SerializeField] private Transform LehuTrans = null;
     private Vector3 RandomRot = Vector3.one;
     void Start()
