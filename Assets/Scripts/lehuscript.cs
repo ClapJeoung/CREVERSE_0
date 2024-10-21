@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class lehuscript : MonoBehaviour
 {
+    //Å×Ã­¾Æ¾Ñ
+
+
     [ContextMenu("·¹ÈÄ")]
     public void ASDF()
     {
