@@ -20,7 +20,14 @@ public class BuildPlayer : MonoBehaviour
         _option.target=BuildTarget.StandaloneWindows;
         _option.options = BuildOptions.None;
 
-        BuildPipeline.BuildPlayer(_option);
+        List<string> scenes = new List<string>();
+        foreach (var scene in EditorBuildSettings.scenes)
+        {
+            if (!scene.enabled) continue;
+            scenes.Add(scene.path);
+        }
+    출처: https://upbo.tistory.com/120 [메모장:티스토리]
+        BuildPipeline.BuildPlayer(scenes.ToArray(),"Builds/LehuFolder/LehuGame.exe",BuildTarget.StandaloneWindows,BuildOptions.None);
     }
     static void Techa()
     {
