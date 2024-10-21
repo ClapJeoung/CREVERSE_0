@@ -21,7 +21,7 @@ public class BuildPlayer : MonoBehaviour
         _option.options = BuildOptions.None;
 
         
-        /*
+        
         List<string> scenes = new List<string>();
         foreach (var scene in EditorBuildSettings.scenes)
         {
@@ -29,9 +29,9 @@ public class BuildPlayer : MonoBehaviour
             scenes.Add(scene.path);
         }
         BuildPipeline.BuildPlayer(scenes.ToArray(), "BuildFolder/LehuFolder/LehuGame.exe", BuildTarget.StandaloneWindows,BuildOptions.None);
-        */
         
-        BuildPipeline.BuildPlayer(_option);
+        
+        //BuildPipeline.BuildPlayer(_option);
     }
     static void Techa()
     {
