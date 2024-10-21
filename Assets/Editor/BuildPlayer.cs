@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 public class BuildPlayer : MonoBehaviour
 {
-    static string SceneName = "TestSceneName";
+    static string SceneName = "TestSceneName.unity";
     static string[] SCENES = FindEnabledEditorScenes();
 
     static void PerformBuild()
