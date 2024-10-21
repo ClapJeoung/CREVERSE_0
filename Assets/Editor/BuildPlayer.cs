@@ -9,11 +9,12 @@ using UnityEngine.UIElements;
 
 public class BuildPlayer : MonoBehaviour
 {
+    static string SceneName = "TestSceneName";
     static string[] SCENES = FindEnabledEditorScenes();
 
     static void PerformBuild()
     {
-        BuildPipeline.BuildPlayer(FindEnabledEditorScenes(), "Builds/Windows/MyGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
+        BuildPipeline.BuildPlayer(new string[] { SceneName }, "Builds/TestFolder/LehuGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
     static void Techa()
     {
