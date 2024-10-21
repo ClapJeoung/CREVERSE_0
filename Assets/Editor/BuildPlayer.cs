@@ -10,27 +10,28 @@ using UnityEngine.UIElements;
 public class BuildPlayer : MonoBehaviour
 {
     static string SceneName = "Assets/Scenes/TestSceneName.unity";
-    static string[] SCENES = FindEnabledEditorScenes();
 
+    [MenuItem("Build/BuildPlayer")]
     static void PerformBuild()
     {
         BuildPlayerOptions _option = new BuildPlayerOptions();
         _option.scenes = new string[] { SceneName };
-        _option.locationPathName = "Builds/LehuFolder/LehuGame.exe";
+        _option.locationPathName = "BuildFolder/LehuFolder/LehuGame.exe";
         _option.target=BuildTarget.StandaloneWindows;
         _option.options = BuildOptions.None;
 
         
+        /*
         List<string> scenes = new List<string>();
         foreach (var scene in EditorBuildSettings.scenes)
         {
             if (!scene.enabled) continue;
             scenes.Add(scene.path);
         }
-        BuildPipeline.BuildPlayer(scenes.ToArray(),"Builds/LehuFolder/LehuGame.exe",BuildTarget.StandaloneWindows,BuildOptions.None);
+        BuildPipeline.BuildPlayer(scenes.ToArray(), "BuildFolder/LehuFolder/LehuGame.exe", BuildTarget.StandaloneWindows,BuildOptions.None);
+        */
         
-        
-        //BuildPipeline.BuildPlayer(_option);
+        BuildPipeline.BuildPlayer(_option);
     }
     static void Techa()
     {
