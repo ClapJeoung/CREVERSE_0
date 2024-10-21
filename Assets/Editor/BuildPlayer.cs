@@ -9,12 +9,18 @@ using UnityEngine.UIElements;
 
 public class BuildPlayer : MonoBehaviour
 {
-    static string SceneName = "TestSceneName.unity";
+    static string SceneName = "Scenes/TestSceneName.unity";
     static string[] SCENES = FindEnabledEditorScenes();
 
     static void PerformBuild()
     {
-        BuildPipeline.BuildPlayer(new string[] { SceneName }, "Builds/LehuGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
+        BuildPlayerOptions _option = new BuildPlayerOptions();
+        _option.scenes = new string[] { SceneName };
+        _option.locationPathName = "Builds/LehuFoler/LehuGame.exe";
+        _option.target=BuildTarget.StandaloneWindows;
+        _option.options = BuildOptions.None;
+
+        BuildPipeline.BuildPlayer(_option);
     }
     static void Techa()
     {
