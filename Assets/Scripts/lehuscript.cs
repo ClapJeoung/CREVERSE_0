@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 
@@ -9,12 +7,6 @@ public class lehuscript : MonoBehaviour
 {
     //Å×Ã­¾Æ¾Ñ
 
-
-    [ContextMenu("·¹ÈÄ")]
-    public void ASDF()
-    {
-        Debug.Log(EditorBuildSettings.scenes[0].path);
-    }
 
 
     [SerializeField] private Transform LehuTrans = null;
