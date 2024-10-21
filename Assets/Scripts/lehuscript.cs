@@ -6,7 +6,7 @@ using UnityEngine;
 public class lehuscript : MonoBehaviour
 {
     //Å×Ã­¾Æ¾Ñ
-
+    µ¥ÇÁÇÆ
 
 
     [SerializeField] private Transform LehuTrans = null;
