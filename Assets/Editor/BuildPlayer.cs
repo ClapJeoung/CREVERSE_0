@@ -16,11 +16,11 @@ public class BuildPlayer : MonoBehaviour
     {
         BuildPlayerOptions _option = new BuildPlayerOptions();
         _option.scenes = new string[] { SceneName };
-        _option.locationPathName = "Builds/LehuFoler/LehuGame.exe";
+        _option.locationPathName = "Builds/LehuFolder/LehuGame.exe";
         _option.target=BuildTarget.StandaloneWindows;
         _option.options = BuildOptions.None;
 
-        /*
+        
         List<string> scenes = new List<string>();
         foreach (var scene in EditorBuildSettings.scenes)
         {
@@ -28,8 +28,8 @@ public class BuildPlayer : MonoBehaviour
             scenes.Add(scene.path);
         }
         BuildPipeline.BuildPlayer(scenes.ToArray(),"Builds/LehuFolder/LehuGame.exe",BuildTarget.StandaloneWindows,BuildOptions.None);
-        */
-        BuildPipeline.BuildPlayer(_option);
+        
+      //  BuildPipeline.BuildPlayer(_option);
     }
     static void Techa()
     {
